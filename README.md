@@ -29,3 +29,91 @@ This project uses a **Deep Learning architecture**:
 - **Sigmoid output** (Logistic Regression) for binary sentiment  
 
 ### 🏗️ Model Architecture
+Input (30 tokens)
+↓
+Embedding (GloVe pretrained vectors)
+↓
+LSTM (64 units)
+↓
+Dense (ReLU) + Dropout
+↓
+Sigmoid Output Layer (0 to 1 score)
+
+
+---
+
+## 🛠️ Tech Stack
+
+**Language:** Python  
+**Libraries:** TensorFlow, Keras, NumPy, NLTK, Tkinter  
+**Environment:** VS Code + Virtual Environment (venv)  
+
+---
+
+## 📂 Project Structure
+
+
+
+SentimentApp/
+│── app.py
+│── sentiment_model.keras
+│── tokenizer.pkl
+│── requirements.txt
+│── README.md
+
+
+---
+
+## 📦 Installation & Setup
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+
+2️⃣ Create a virtual environment
+Windows
+python -m venv venv
+venv\Scripts\activate
+
+macOS / Linux
+python3 -m venv venv
+source venv/bin/activate
+
+3️⃣ Install dependencies
+pip install -r requirements.txt
+
+4️⃣ Download NLTK stopwords
+python -c "import nltk; nltk.download('stopwords')"
+
+5️⃣ Run the app
+python app.py
+
+🧪 Usage
+
+Open the application
+
+Type/paste one or more news headlines
+
+Click Predict Sentiment
+
+View predictions in a separate results window
+
+Save results to a text file if needed
+
+🔮 Future Enhancements
+
+Export predictions to CSV
+
+Add GloVe file selector
+
+Add dark mode
+
+Convert to .exe
+
+Live news scraping (Yahoo Finance / Reuters)
+
+🤝 Author
+
+Developed by Sanya Gupta
+Model, GUI, NLP preprocessing, and application logic.
