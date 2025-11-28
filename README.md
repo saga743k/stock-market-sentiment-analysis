@@ -50,9 +50,7 @@ Sigmoid Output Layer (0 to 1 score)
 
 ---
 
-## 📂 Project Structure
-
-
+## 🧱 Project Structure
 
 SentimentApp/
 │── app.py
@@ -61,59 +59,64 @@ SentimentApp/
 │── requirements.txt
 │── README.md
 
+yaml
+Copy code
 
 ---
 
 ## 📦 Installation & Setup
 
 ### 1️⃣ Clone the repository
-```bash
+bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
-
 2️⃣ Create a virtual environment
 Windows
+
+bash
+Copy code
 python -m venv venv
 venv\Scripts\activate
-
 macOS / Linux
+
+bash
+Copy code
 python3 -m venv venv
 source venv/bin/activate
-
 3️⃣ Install dependencies
+bash
+Copy code
 pip install -r requirements.txt
-
 4️⃣ Download NLTK stopwords
+bash
+Copy code
 python -c "import nltk; nltk.download('stopwords')"
-
 5️⃣ Run the app
+bash
+Copy code
 python app.py
-
 🧪 Usage
-
 Open the application
 
-Type/paste one or more news headlines
+Type or paste multiple news headlines
 
 Click Predict Sentiment
 
-View predictions in a separate results window
+View predictions in a popup window
 
-Save results to a text file if needed
+Save results to file if needed
 
 🔮 Future Enhancements
-
 Export predictions to CSV
-
-Add GloVe file selector
 
 Add dark mode
 
-Convert to .exe
+Add GloVe selector
 
-Live news scraping (Yahoo Finance / Reuters)
+Convert app to .exe
+
+Add real-time news scraping
 
 🤝 Author
-
-Developed by Sanya Gupta
-Model, GUI, NLP preprocessing, and application logic.
+Sanya Gupta
+Model development • GUI • NLP preprocessing • App integration
