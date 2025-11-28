@@ -6,117 +6,120 @@ The model is integrated into a full-screen **Tkinter GUI** and supports **multip
 ---
 
 ## 🚀 Features
-
-- 🖥️ Full-screen Tkinter desktop app  
-- 📝 Enter one or multiple headlines (one per line)  
-- 🔤 GloVe embeddings + LSTM deep learning model  
-- 🤖 Real-time sentiment prediction  
-- 📊 Confidence score and raw probability  
-- 📜 Scrollable results window  
-- 💾 Save predictions to a `.txt` file  
-- ⚠️ Error handling & clean UI  
+- Full-screen Tkinter desktop app  
+- Enter one or multiple headlines (one per line)  
+- Real-time sentiment prediction  
+- Pre-trained GloVe embeddings  
+- LSTM deep learning architecture  
+- Confidence score + raw probability  
+- Scrollable results window  
+- Save predictions to `.txt` file  
+- Proper error handling and logs  
 
 ---
 
 ## 🧠 Machine Learning Model
 
-This project uses a **Deep Learning architecture**:
+This project uses a deep learning architecture trained on stock news headlines.
 
-- **Tokenizer + Padding**  
-- **Pre-trained GloVe embeddings** (100d/200d)
-- **LSTM layer** for sequence understanding  
-- **Dense + Dropout** for classification  
-- **Sigmoid output** (Logistic Regression) for binary sentiment  
+### Model Components:
+- **Tokenizer + Padding (length = 30)**
+- **GloVe word embeddings** (100d/200d)
+- **LSTM layer** to capture sequence meaning  
+- **Dense + Dropout layers** for refinement  
+- **Sigmoid output layer** (Logistic Regression)  
 
-### 🏗️ Model Architecture
-Input (30 tokens)
-↓
-Embedding (GloVe pretrained vectors)
-↓
-LSTM (64 units)
-↓
-Dense (ReLU) + Dropout
-↓
-Sigmoid Output Layer (0 to 1 score)
-
+### Model Flow:
+```
+Input → GloVe Embedding → LSTM → Dense → Sigmoid → Sentiment Output
+```
 
 ---
 
-## 🛠️ Tech Stack
+## 📚 Technologies Used
 
-**Language:** Python  
-**Libraries:** TensorFlow, Keras, NumPy, NLTK, Tkinter  
-**Environment:** VS Code + Virtual Environment (venv)  
+- Python 3.x  
+- TensorFlow / Keras  
+- NumPy  
+- NLTK  
+- Tkinter (GUI)  
+- Regex (text cleaning)  
+- Virtual Environment (venv)  
 
 ---
 
-## 🧱 Project Structure
-
+## 📂 Project Structure
+```
 SentimentApp/
 │── app.py
 │── sentiment_model.keras
 │── tokenizer.pkl
 │── requirements.txt
 │── README.md
-
-yaml
-Copy code
+```
 
 ---
 
-## 📦 Installation & Setup
+## 🛠 Installation & Setup
 
-### 1️⃣ Clone the repository
-bash
+### 1. Clone the repository
+```bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
-2️⃣ Create a virtual environment
-Windows
+```
 
-bash
-Copy code
+### 2. Create a virtual environment
+
+#### Windows:
+```bash
 python -m venv venv
 venv\Scripts\activate
-macOS / Linux
+```
 
-bash
-Copy code
+#### macOS / Linux:
+```bash
 python3 -m venv venv
 source venv/bin/activate
-3️⃣ Install dependencies
-bash
-Copy code
+```
+
+### 3. Install dependencies
+```bash
 pip install -r requirements.txt
-4️⃣ Download NLTK stopwords
-bash
-Copy code
+```
+
+### 4. Download NLTK stopwords
+```bash
 python -c "import nltk; nltk.download('stopwords')"
-5️⃣ Run the app
-bash
-Copy code
+```
+
+### 5. Run the app
+```bash
 python app.py
-🧪 Usage
-Open the application
+```
 
-Type or paste multiple news headlines
+---
 
-Click Predict Sentiment
+## 🧪 Usage
+1. Open the application  
+2. Type/paste one or more news headlines  
+3. Click **Predict Sentiment**  
+4. View results in a scrollable popup  
+5. Save predictions if needed  
 
-View predictions in a popup window
+---
 
-Save results to file if needed
+## 🔮 Future Enhancements
+- Export results to CSV  
+- Add a GloVe file selector  
+- Dark mode UI  
+- Convert to `.exe`  
+- Integrate live news scraping (Yahoo Finance, Reuters)
 
-🔮 Future Enhancements
-Export predictions to CSV
+---
 
-Add dark mode
+## 🤝 Author
+**Sanya Gupta**  
+Machine Learning Model • GUI • NLP Pipeline • Application Logic  
+If you like this project, please ⭐ star the repository!
 
-Add GloVe selector
 
-Convert app to .exe
-
-Add real-time news scraping
-
-🤝 Author
-Sanya Gupta
-Model development • GUI • NLP preprocessing • App integration
